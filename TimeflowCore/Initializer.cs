@@ -22,7 +22,8 @@ namespace TimeflowCore
             var completeTimeLinePath = projectDirectoryPath + "/.timeline";
             if (!Directory.Exists(completeTimeLinePath))
             {
-                Directory.CreateDirectory(".timeline"); 
+                Directory.CreateDirectory(completeTimeLinePath); 
+                return;
             }
             Console.WriteLine("TimeLine repository has been already created.");
         }
