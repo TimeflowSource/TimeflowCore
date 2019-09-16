@@ -1,26 +1,38 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
 namespace TimeflowCore
 {
-    public class Initializer
+    public static class Initializer
     {
+        public static string ProjectDirectoryPath { get; set; }
+        private static List<TimeflowDirectory> _projectStructureCache = new List<TimeflowDirectory>();
+        //TODO
+        private static readonly string[] _blockedDirectories = {".timeflow", ".idea"};
         public static void CreateTimeflowRepository(string projectDirectoryPath)
         {
-            CreateTimeflowHiddenDirectory(projectDirectoryPath);
-            CreateTimeflowProjectSnapshotDirectories(projectDirectoryPath);
+            ProjectDirectoryPath = projectDirectoryPath;
+            CreateTimeflowHiddenDirectory();
+            CreateTimeflowProjectSnapshotDirectories();
+            foreach (var VARIABLE in _projectStructureCache)
+            {
+                Console.WriteLine(VARIABLE);                
+            }
+
         }
 
-        public static bool DoesTimeflowRepositoryExists(string projectDirectoryPath)
+        public static bool DoesTimeflowRepositoryExists()
         {
-            var completeTimeflowPath = projectDirectoryPath + "/.timeflow";
+            var completeTimeflowPath = ProjectDirectoryPath + "/.timeflow";
             return Directory.Exists(completeTimeflowPath);
         }
 
-        private static void CreateTimeflowHiddenDirectory(string projectDirectoryPath)
+        // TODO: Should be true|false in future
+        private static void CreateTimeflowHiddenDirectory()
         {
-            var completeTimeflowPath = projectDirectoryPath + "/.timeflow";
+            var completeTimeflowPath = ProjectDirectoryPath + "/.timeflow";
             if (!Directory.Exists(completeTimeflowPath))
             {
                 Console.WriteLine($"Timeflow repository successfully created at: {completeTimeflowPath}");
@@ -30,21 +42,25 @@ namespace TimeflowCore
             Console.WriteLine("Timeflow repository has been already created.");
         }
 
-        private static void CreateTimeflowProjectSnapshotDirectories(string projectDirectoryPath)
+        private static void CreateTimeflowProjectSnapshotDirectories()
         {
-            GreedyDirectorySearch(projectDirectoryPath);
+            GreedyDirectorySearch(ProjectDirectoryPath);
         }
 
         private static void GreedyDirectorySearch(string currentDirectory)
         {
-            if (!Directory.EnumerateDirectories(currentDirectory).Any())
+            if (!Directory.EnumerateDirectories(currentDirectory).Any() && _blockedDirectories.Contains(Directory.GetCurrentDirectory()))
             {
                 return;
             }
             foreach (var directory in Directory.EnumerateDirectories(currentDirectory))
             {
-                Console.WriteLine(directory);
-                GreedyDirectorySearch(directory);
+                //TODO need to be fixed - short dirs names
+                if (!_blockedDirectories.Contains(directory))
+                {
+                    _projectStructureCache.Add(new TimeflowDirectory(directory));
+                    GreedyDirectorySearch(directory);
+                }
             }
         }
     }
