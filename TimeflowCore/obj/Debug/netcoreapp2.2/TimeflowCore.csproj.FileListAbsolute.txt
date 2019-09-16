@@ -1,0 +1,11 @@
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/bin/Debug/netcoreapp2.2/TimeflowCore.deps.json
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/bin/Debug/netcoreapp2.2/TimeflowCore.runtimeconfig.json
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/bin/Debug/netcoreapp2.2/TimeflowCore.runtimeconfig.dev.json
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/bin/Debug/netcoreapp2.2/TimeflowCore.dll
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/bin/Debug/netcoreapp2.2/TimeflowCore.pdb
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/obj/Debug/netcoreapp2.2/TimeflowCore.csprojAssemblyReference.cache
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/obj/Debug/netcoreapp2.2/TimeflowCore.csproj.CoreCompileInputs.cache
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/obj/Debug/netcoreapp2.2/TimeflowCore.AssemblyInfoInputs.cache
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/obj/Debug/netcoreapp2.2/TimeflowCore.AssemblyInfo.cs
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/obj/Debug/netcoreapp2.2/TimeflowCore.dll
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/obj/Debug/netcoreapp2.2/TimeflowCore.pdb
