@@ -15,9 +15,12 @@ namespace TimeflowCore
         {
             try
             {
+                Initializer.CreateTimeLineRepository(this.ProjectDirectoryPath);
             }
             catch (Exception e)
             {
+                Console.WriteLine(e);
+                throw;
             }
         }
 
