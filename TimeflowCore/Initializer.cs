@@ -22,7 +22,7 @@ namespace TimeflowCore
             var completeTimeflowPath = projectDirectoryPath + "/.timeflow";
             if (!Directory.Exists(completeTimeflowPath))
             {
-                Console.WriteLine($"{completeTimeflowPath}");
+                Console.WriteLine($"Timeflow repository successfully created at: {completeTimeflowPath}");
                 Directory.CreateDirectory(completeTimeflowPath); 
                 return;
             }

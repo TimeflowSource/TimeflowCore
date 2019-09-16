@@ -13,14 +13,15 @@ namespace TimeflowCore
             _timeflowTracker = new TimeflowTracker(requestPath);
             while (true)
             {
+                Console.WriteLine("Write command |init|start|stop|exit");
                 var command = Console.ReadLine();
                 if (command == "init")
                     _timeflowTracker.Init();
-                if (command == "exit")
+                if (command == "start")
                     _timeflowTracker.Start();
-                else if (command == "start")
-                    _timeflowTracker.Stop();
                 else if (command == "stop")
+                    _timeflowTracker.Stop();
+                else if (command == "exit")
                     currentState = false;
                 if (!currentState)
                 {
