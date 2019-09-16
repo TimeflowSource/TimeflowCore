@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Linq;
 
 namespace TimeflowCore
 {
@@ -31,7 +32,20 @@ namespace TimeflowCore
 
         private static void CreateTimeflowProjectSnapshotDirectories(string projectDirectoryPath)
         {
-            var completeTimeflowPath = projectDirectoryPath + "/.timeflow";
+            GreedyDirectorySearch(projectDirectoryPath);
+        }
+
+        private static void GreedyDirectorySearch(string currentDirectory)
+        {
+            if (!Directory.EnumerateDirectories(currentDirectory).Any())
+            {
+                return;
+            }
+            foreach (var directory in Directory.EnumerateDirectories(currentDirectory))
+            {
+                Console.WriteLine(directory);
+                GreedyDirectorySearch(directory);
+            }
         }
     }
 }
