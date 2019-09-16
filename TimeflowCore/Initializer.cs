@@ -5,32 +5,33 @@ namespace TimeflowCore
 {
     public class Initializer
     {
-        public static void CreateTimeLineRepository(string projectDirectoryPath)
+        public static void CreateTimeflowRepository(string projectDirectoryPath)
         {
-            CreateTimeLineHiddenDirectory(projectDirectoryPath);
-            CreateTimeLineProjectSnapshotDirectories(projectDirectoryPath);
+            CreateTimeflowHiddenDirectory(projectDirectoryPath);
+            CreateTimeflowProjectSnapshotDirectories(projectDirectoryPath);
         }
 
-        public static bool DoesTimeLineRepositoryExists(string projectDirectoryPath)
+        public static bool DoesTimeflowRepositoryExists(string projectDirectoryPath)
         {
-            var completeTimeLinePath = projectDirectoryPath + "/.timeline";
-            return Directory.Exists(completeTimeLinePath);
+            var completeTimeflowPath = projectDirectoryPath + "/.timeflow";
+            return Directory.Exists(completeTimeflowPath);
         }
 
-        private static void CreateTimeLineHiddenDirectory(string projectDirectoryPath)
+        private static void CreateTimeflowHiddenDirectory(string projectDirectoryPath)
         {
-            var completeTimeLinePath = projectDirectoryPath + "/.timeline";
-            if (!Directory.Exists(completeTimeLinePath))
+            var completeTimeflowPath = projectDirectoryPath + "/.timeflow";
+            if (!Directory.Exists(completeTimeflowPath))
             {
-                Directory.CreateDirectory(completeTimeLinePath); 
+                Console.WriteLine($"{completeTimeflowPath}");
+                Directory.CreateDirectory(completeTimeflowPath); 
                 return;
             }
-            Console.WriteLine("TimeLine repository has been already created.");
+            Console.WriteLine("Timeflow repository has been already created.");
         }
 
-        private static void CreateTimeLineProjectSnapshotDirectories(string projectDirectoryPath)
+        private static void CreateTimeflowProjectSnapshotDirectories(string projectDirectoryPath)
         {
-            var completeTimeLinePath = projectDirectoryPath + "/.timeline";
+            var completeTimeflowPath = projectDirectoryPath + "/.timeflow";
         }
     }
 }

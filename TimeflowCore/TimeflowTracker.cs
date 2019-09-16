@@ -15,7 +15,7 @@ namespace TimeflowCore
         {
             try
             {
-                Initializer.CreateTimeLineRepository(this.ProjectDirectoryPath);
+                Initializer.CreateTimeflowRepository(this.ProjectDirectoryPath);
             }
             catch (Exception e)
             {
