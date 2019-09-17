@@ -1,0 +1,14 @@
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/bin/Release/netcoreapp2.2/win10-x64/hostpolicy.dll
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/bin/Release/netcoreapp2.2/win10-x64/hostfxr.dll
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/bin/Release/netcoreapp2.2/win10-x64/TimeflowCore.exe
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/bin/Release/netcoreapp2.2/win10-x64/TimeflowCore.deps.json
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/bin/Release/netcoreapp2.2/win10-x64/TimeflowCore.runtimeconfig.json
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/bin/Release/netcoreapp2.2/win10-x64/TimeflowCore.runtimeconfig.dev.json
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/bin/Release/netcoreapp2.2/win10-x64/TimeflowCore.dll
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/bin/Release/netcoreapp2.2/win10-x64/TimeflowCore.pdb
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/obj/Release/netcoreapp2.2/win10-x64/TimeflowCore.csprojAssemblyReference.cache
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/obj/Release/netcoreapp2.2/win10-x64/TimeflowCore.csproj.CoreCompileInputs.cache
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/obj/Release/netcoreapp2.2/win10-x64/TimeflowCore.AssemblyInfoInputs.cache
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/obj/Release/netcoreapp2.2/win10-x64/TimeflowCore.AssemblyInfo.cs
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/obj/Release/netcoreapp2.2/win10-x64/TimeflowCore.dll
+/home/bond/RiderProjects/TimeflowCore/TimeflowCore/obj/Release/netcoreapp2.2/win10-x64/TimeflowCore.pdb

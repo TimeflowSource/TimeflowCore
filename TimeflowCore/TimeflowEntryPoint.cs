@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace TimeflowCore
 {
@@ -7,28 +8,22 @@ namespace TimeflowCore
         private static TimeflowTracker _timeflowTracker;
         static void Main(string[] args)
         {
-            var currentState = true;
-            Console.WriteLine("Enter valid path to directory: ");
-            var requestPath = Console.ReadLine();
+            if (args == null || args.Length != 1)
+            {
+                return;
+            }
+
+            if (!Directory.Exists(args[0]))
+            {
+                return;
+            }
+
+            var requestPath = args[0];
             _timeflowTracker = new TimeflowTracker(requestPath);
             while (true)
             {
-                Console.WriteLine("Write command |init|start|stop|exit");
-                var command = Console.ReadLine();
-                if (command == "init")
-                    _timeflowTracker.Init();
-                if (command == "start")
-                    _timeflowTracker.Start();
-                else if (command == "stop")
-                    _timeflowTracker.Stop();
-                else if (command == "exit")
-                    currentState = false;
-                if (!currentState)
-                {
-                    break;
-                }
+                
             }
         }
     }
-
 }

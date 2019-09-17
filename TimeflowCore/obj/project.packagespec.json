@@ -42,5 +42,16 @@
       "assetTargetFallback": true,
       "warn": true
     }
+  },
+  "runtimes": {
+    "debian.8-x64": {
+      "#import": []
+    },
+    "osx.10.12-x64": {
+      "#import": []
+    },
+    "win10-x64": {
+      "#import": []
+    }
   }
 }
